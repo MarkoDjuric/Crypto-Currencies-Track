@@ -4,6 +4,7 @@ This SPA will allow the user to track the values of cryptocurrencies and value o
 
 Technologies:
 1. Responsive Design.
-2. Native JavaScript(E6).
-3. ESlint.
-4. Babel.
+2. CSS preprocessor.
+3. Native JavaScript(E6).
+4. ESlint.
+5. Babel.
