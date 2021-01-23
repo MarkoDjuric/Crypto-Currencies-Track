@@ -1,5 +1,5 @@
 # Crypto-Currencies-Track   
-![Screenshot](icons8-javascript.svg) ![Screenshot](iconfinder_288_Sass_4518841.svg) 
+![Screenshot](icons8-javascript.svg) ![Screenshot](icons8-sass.svg) 
 
 This SPA will allow the user to track the values of cryptocurrencies and value of the cryptocurrencies the user has.
 
