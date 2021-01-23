@@ -8,3 +8,6 @@ Technologies:
 3. Native JavaScript(E6).
 4. ESlint.
 5. Babel.
+
+
+![alt text](https://cryptoformatics.com/wp-content/uploads/2019/06/mother-btc.jpg)
