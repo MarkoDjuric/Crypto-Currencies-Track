@@ -75,3 +75,19 @@ if(!location.hash) {
 
 loadContent()
 
+window.addEventListener("hashchange",  () => {
+  
+  console.log(routeTracker)
+
+  
+  if(location.hash === '#root'){
+    ul.style.display = 'block'
+    contentDiv.style.display = 'none'
+  
+  }else if(location.hash !== '#root'){
+    contentDiv.style.display = 'block'
+    ul.style.display = 'none'
+    loadContent()
+  }
+  
+})
