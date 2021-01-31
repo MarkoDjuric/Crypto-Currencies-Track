@@ -66,3 +66,12 @@ function loadContent(){
 
 });
 }
+
+if(!location.hash) {
+
+  location.hash = "#root";
+
+}
+
+loadContent()
+
