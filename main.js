@@ -45,3 +45,24 @@ fetch(url + qString)
   });
 });
      
+function getContent(fragmentId, callback){
+
+  var pages = {
+    Bitcoin: 'bitcoin',
+    Ethereum: "ethereum",
+    Tether: "tether"
+  };
+
+  callback(pages[fragmentId]);
+}
+
+function loadContent(){
+
+  fragmentId = location.hash.substr(1);
+  console.log(fragmentId)
+
+  getContent(fragmentId, function (content) {
+  contentDiv.innerHTML = content;
+
+});
+}
