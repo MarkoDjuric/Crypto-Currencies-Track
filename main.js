@@ -91,3 +91,24 @@ window.addEventListener("hashchange",  () => {
   }
   
 })
+
+
+
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+   
+    console.log(hashinRoot = true) 
+    let lokacija = location.hash
+    console.log(lokacija)
+    if(lokacija === '#root') {
+      console.log('jeste root')
+      // window.location.href = lokacija
+      // document.body.innerHTML = '<div id="root"><h1>aasdasd</h1> </div>'
+      location.hash = "#root";
+      contentDiv.style.display = 'none'
+      console.log(ul)
+     }else {
+      console.log('nije root')
+      console.log(lokacija)
+      console.log(window.location.href = lokacija)
+      ul.style.display = 'none'
+    }
