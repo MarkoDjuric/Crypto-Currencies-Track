@@ -47,7 +47,7 @@ fetch(url + qString)
      
 function getContent(fragmentId, callback){
 
-  var pages = {
+  let pages = {
     Bitcoin: 'bitcoin',
     Ethereum: "ethereum",
     Tether: "tether"
