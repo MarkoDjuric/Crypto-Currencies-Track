@@ -13,7 +13,7 @@ let currencies;
 let listedData = '';
 const ul = document.getElementById('root')
 let hashinRoot = false;
-var contentDiv = document.getElementById("app")
+const contentDiv = document.getElementById("app")
 const element = document.getElementsByClassName("hidden")[0];
 // Fetch API data from https://coinmarketcap.com/api/
 fetch(url + qString)
