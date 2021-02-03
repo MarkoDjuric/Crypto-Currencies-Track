@@ -63,12 +63,16 @@ showLoader()
          
         });
 hideLoader()
-        },3000)
-
-
-       
-
+        },3000)   
 })
+
+function hideLoader(){
+  loader.style.display = 'none'
+}
+function showLoader(){
+
+  loader.style.display = 'block'
+}
      
 function getContent(fragmentId, callback){
 
