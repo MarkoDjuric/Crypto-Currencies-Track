@@ -92,8 +92,6 @@ window.addEventListener("hashchange",  () => {
   
 })
 
-
-
   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
    
     console.log(hashinRoot = true) 
