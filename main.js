@@ -11,39 +11,64 @@ const paragraphs = Array.from(document.getElementsByClassName('valutes'))
 // Creating variables to store data
 let currencies;
 let listedData = '';
+let myVar;
 const ul = document.getElementById('root')
 let hashinRoot = false;
 const contentDiv = document.getElementById("app")
 const element = document.getElementsByClassName("hidden")[0];
-// Fetch API data from https://coinmarketcap.com/api/
-fetch(url + qString)
-   .then((res) => {
 
-     return res.json();
-   })
-   .then((data)=> {
-     console.log(data)
-      currencies = data;
+// Creating function to fecth data
+async function getData(url, qString) {
+   
+  let response = await fetch(url + qString);
+  let data = await response.json();
+  return data
+}
+
+getData(url, qString).then(data => {
+
+    console.log(data)
+    currencies = data;
+
       // Get first tree names of cryptos
       listedData = currencies['data'].slice(0,3);
 
-      // Creating paragraphs with names of first tree cryptocurrencies
-      paragraphs.forEach( (elem, idx) => {
-               //crate <a href= ""> 
-      let a = document.createElement('a')
-      let crypto = listedData[idx]['name']
-      a.setAttribute("href","#"+crypto+"")
-      a.textContent = listedData[idx]['name']
-      //   elem.textContent = listedData[idx]['name']
-        elem.insertAdjacentElement('afterbegin',a)  
-        elem.addEventListener('click', cryptoDetails => {
-        
-     console.log(element)
-     
-    
-    })   
-  });
-});
+  
+        // Creating paragraphs with names of first tree cryptocurrencies
+        setTimeout(() => {
+          paragraphs.forEach( (elem, idx) => {
+            // Creating <a href= ""> 
+            let a = document.createElement('a')
+            let crypto = listedData[idx]['name']
+            a.setAttribute("href","#"+crypto+"")
+            a.textContent = listedData[idx]['name']
+            // elem.textContent = listedData[idx]['name']
+              elem.insertAdjacentElement('afterbegin',a)  
+
+              elem.addEventListener('click', cryptoDetails => {
+                
+showLoader()
+             getDetailData(url_2).then(data=> {
+               console.log(data)
+               setTimeout(() => {
+               hideLoader()
+               },2000)
+               
+             })
+            
+           console.log(element)
+           
+          
+          })   
+         
+        });
+hideLoader()
+        },3000)
+
+
+       
+
+})
      
 function getContent(fragmentId, callback){
 
