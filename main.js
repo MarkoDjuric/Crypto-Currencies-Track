@@ -7,14 +7,14 @@ const qString = "?CMC_PRO_API_KEY="+apiKey;
 // var url_2 = 'https://api.nomics.com/v1/currencies?key=564d806d2d0f0934af84828a58116d74'
 
 // Transform HTML collection into an array
-const paragraphs = Array.from(document.getElementsByClassName('valutes'))
+const paragraphs = Array.from(document.getElementsByClassName('valutes'));
 // Creating variables to store data
 let currencies;
 let listedData = '';
 let myVar;
-const ul = document.getElementById('root')
+const ul = document.getElementById('root');
 let hashinRoot = false;
-const contentDiv = document.getElementById("app")
+const contentDiv = document.getElementById("app");
 const element = document.getElementsByClassName("hidden")[0];
 
 // Creating function to fecth data
