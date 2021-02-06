@@ -27,27 +27,23 @@ async function getData(url, qString) {
 
 getData(url, qString).then(data => {
 
-    console.log(data)
-    currencies = data;
+   console.log(data)
+   currencies = data;
 
-      // Get first tree names of cryptos
-      listedData = currencies['data'].slice(0,3);
-
-  
-        // Creating paragraphs with names of first tree cryptocurrencies
-        setTimeout(() => {
-          paragraphs.forEach( (elem, idx) => {
-            // Creating <a href= ""> 
-            let a = document.createElement('a')
-            let crypto = listedData[idx]['name']
-            a.setAttribute("href","#"+crypto+"")
-            a.textContent = listedData[idx]['name']
-            // elem.textContent = listedData[idx]['name']
-              elem.insertAdjacentElement('afterbegin',a)  
-
-              elem.addEventListener('click', cryptoDetails => {
-                
-showLoader()
+   // Get first tree names of cryptos
+   listedData = currencies['data'].slice(0,3);
+   // Creating paragraphs with names of first tree cryptocurrencies
+       setTimeout(() => {
+         paragraphs.forEach( (elem, idx) => {
+           // Creating <a href= ""> 
+           let a = document.createElement('a')
+           let crypto = listedData[idx]['name']
+           a.setAttribute("href","#"+crypto+"")
+           a.textContent = listedData[idx]['name']
+           // elem.textContent = listedData[idx]['name']
+           elem.insertAdjacentElement('afterbegin',a)  
+         elem.addEventListener('click', cryptoDetails => {
+             showLoader();
              getDetailData(url_2).then(data=> {
                console.log(data)
                setTimeout(() => {
@@ -57,12 +53,10 @@ showLoader()
              })
             
            console.log(element)
-           
-          
           })   
          
         });
-hideLoader()
+        hideLoader()
         },3000)   
 })
 
