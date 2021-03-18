@@ -3,7 +3,7 @@
 
 This SPA will allow the user to track the values of cryptocurrencies and value of the cryptocurrencies the user has.
 
-Technologies: 
+🛠Technologies: 
 1. Responsive Design.
 2. CSS preprocessor.
 3. Native JavaScript(E6).
